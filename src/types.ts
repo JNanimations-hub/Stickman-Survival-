@@ -1,3 +1,4 @@
+import type { Overlay } from "./scenes/Overlay";
 // Shared types for scenes.json. Every field here matches a field in episodes/epN/scenes.json.
 
 export type TimeOfDay = "morning" | "day" | "dusk" | "night";
@@ -39,7 +40,8 @@ export interface SceneData {
   day_title: string | null;
   sfx: string[];
   // optional staging
-  character?: boolean;     // false = scene without the main character (establishing shots)
+  character?: boolean;
+  overlay?: Overlay | Overlay[];   // on-screen numbers, rules, tips… (see src/scenes/Overlay.tsx)     // false = scene without the main character (establishing shots)
   dog?: DogPose;
   x?: number;              // character x in the place (0–1920); default = the place's spot
   x_to?: number;

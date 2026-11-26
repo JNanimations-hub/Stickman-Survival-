@@ -45,7 +45,12 @@
       "dog": "run",
       "ash_cover": 0.8,
       "audio": "voice/scene_002.wav",
-      "duration": 1.1
+      "duration": 1.1,
+      "overlay": {
+        "type": "tip",
+        "text": "RUN UPHILL",
+        "on": "Run"
+      }
     },
     {
       "id": 3,
@@ -151,7 +156,12 @@
       ],
       "ash_cover": 0,
       "audio": "voice/scene_007.wav",
-      "duration": 2.42
+      "duration": 2.42,
+      "overlay": {
+        "type": "time",
+        "text": "6:12 PM",
+        "on": "Six"
+      }
     },
     {
       "id": 8,
@@ -192,7 +202,13 @@
       "character": false,
       "ash_cover": 0,
       "audio": "voice/scene_009.wav",
-      "duration": 2.4
+      "duration": 2.4,
+      "overlay": {
+        "type": "stat",
+        "text": "600 YEARS ASLEEP",
+        "icon": "mountain",
+        "on": "six hundred"
+      }
     },
     {
       "id": 10,
@@ -263,7 +279,12 @@
       "ash_cover": 0,
       "x": 600,
       "audio": "voice/scene_012.wav",
-      "duration": 2.31
+      "duration": 2.31,
+      "overlay": {
+        "type": "alert",
+        "text": "ASH FALL EXPECTED. STAY INDOORS.",
+        "at": 0.1
+      }
     },
     {
       "id": 13,
@@ -396,7 +417,13 @@
       ],
       "ash_cover": 0,
       "audio": "voice/scene_018.wav",
-      "duration": 1.83
+      "duration": 1.83,
+      "overlay": {
+        "type": "problem",
+        "label": "PROBLEM 1",
+        "text": "THE AIR",
+        "on": "air"
+      }
     },
     {
       "id": 19,
@@ -497,7 +524,16 @@
       "x": 1150,
       "ash_cover": 0.05,
       "audio": "voice/scene_023.wav",
-      "duration": 1.83
+      "duration": 1.83,
+      "overlay": {
+        "type": "checklist",
+        "items": [
+          "WINDOWS CLOSED",
+          "FLUE SHUT",
+          "FANS OFF"
+        ],
+        "at": 0.0
+      }
     },
     {
       "id": 24,
@@ -520,7 +556,12 @@
       "facing": "right",
       "ash_cover": 0.05,
       "audio": "voice/scene_024.wav",
-      "duration": 2.89
+      "duration": 2.89,
+      "overlay": {
+        "type": "tip",
+        "text": "WET TOWELS SEAL THE GAPS",
+        "on": "towels"
+      }
     },
     {
       "id": 25,
@@ -542,7 +583,12 @@
       "x": 380,
       "ash_cover": 0.05,
       "audio": "voice/scene_025.wav",
-      "duration": 3.62
+      "duration": 3.62,
+      "overlay": {
+        "type": "time",
+        "text": "9:40 PM",
+        "on": "Nine"
+      }
     },
     {
       "id": 26,
@@ -632,7 +678,12 @@
       "x": 800,
       "ash_cover": 0.1,
       "audio": "voice/scene_029.wav",
-      "duration": 2.66
+      "duration": 2.66,
+      "overlay": {
+        "type": "fact",
+        "text": "VOLCANIC ASH = TINY ROCK + GLASS",
+        "on": "rock"
+      }
     },
     {
       "id": 30,
@@ -651,7 +702,13 @@
       ],
       "ash_cover": 0.1,
       "audio": "voice/scene_030.wav",
-      "duration": 1.61
+      "duration": 1.61,
+      "overlay": {
+        "type": "problem",
+        "label": "PROBLEM 2",
+        "text": "WATER",
+        "on": "water"
+      }
     },
     {
       "id": 31,
@@ -736,7 +793,13 @@
       "sfx": [],
       "ash_cover": 0.12,
       "audio": "voice/scene_034.wav",
-      "duration": 2.26
+      "duration": 2.26,
+      "overlay": {
+        "type": "stat",
+        "text": "1 GALLON / PERSON / DAY",
+        "icon": "drop",
+        "on": "gallon"
+      }
     },
     {
       "id": 35,
@@ -775,7 +838,13 @@
       "sfx": [],
       "ash_cover": 0.12,
       "audio": "voice/scene_036.wav",
-      "duration": 2.22
+      "duration": 2.22,
+      "overlay": {
+        "type": "stat",
+        "text": "31 GALLONS",
+        "icon": "drop",
+        "on": "Thirty"
+      }
     },
     {
       "id": 37,
@@ -802,7 +871,12 @@
       "x_to": 700,
       "ash_cover": 0.15,
       "audio": "voice/scene_037.wav",
-      "duration": 3.36
+      "duration": 3.36,
+      "overlay": {
+        "type": "tip",
+        "text": "COVER YOUR WATER",
+        "on": "lid"
+      }
     },
     {
       "id": 38,
@@ -824,7 +898,12 @@
       "character": false,
       "ash_cover": 0.45,
       "audio": "voice/scene_038.wav",
-      "duration": 3.12
+      "duration": 3.12,
+      "overlay": {
+        "type": "time",
+        "text": "7:00 AM",
+        "at": 2.0
+      }
     },
     {
       "id": 39,
@@ -864,7 +943,12 @@
       "x": 1150,
       "ash_cover": 0.17,
       "audio": "voice/scene_040.wav",
-      "duration": 2.96
+      "duration": 2.96,
+      "overlay": {
+        "type": "measure",
+        "value": 2,
+        "on": "two"
+      }
     },
     {
       "id": 41,
@@ -929,7 +1013,13 @@
       ],
       "ash_cover": 0.2,
       "audio": "voice/scene_043.wav",
-      "duration": 3.61
+      "duration": 3.61,
+      "overlay": {
+        "type": "rule",
+        "label": "RULE 2",
+        "text": "NEVER GO BACK OUTSIDE",
+        "on": "never"
+      }
     },
     {
       "id": 44,
@@ -1015,7 +1105,13 @@
       ],
       "ash_cover": 0.3,
       "audio": "voice/scene_047.wav",
-      "duration": 0.46
+      "duration": 0.46,
+      "overlay": {
+        "type": "rule",
+        "label": "DON'T",
+        "text": "RUB YOUR EYES",
+        "at": 0.0
+      }
     },
     {
       "id": 48,
@@ -1054,7 +1150,12 @@
       "x": 1150,
       "ash_cover": 0.2,
       "audio": "voice/scene_049.wav",
-      "duration": 1.88
+      "duration": 1.88,
+      "overlay": {
+        "type": "tip",
+        "text": "RINSE WITH CLEAN WATER",
+        "on": "Rinse"
+      }
     },
     {
       "id": 50,
@@ -1114,7 +1215,13 @@
       "sfx": [],
       "ash_cover": 0.2,
       "audio": "voice/scene_052.wav",
-      "duration": 3.21
+      "duration": 3.21,
+      "overlay": {
+        "type": "stat",
+        "text": "1 SCRATCH",
+        "icon": "glasses",
+        "on": "scratch"
+      }
     },
     {
       "id": 53,
@@ -1165,7 +1272,13 @@
       "sfx": [],
       "ash_cover": 0.2,
       "audio": "voice/scene_055.wav",
-      "duration": 2.5
+      "duration": 2.5,
+      "overlay": {
+        "type": "tip",
+        "text": "GLASSES, NOT CONTACT LENSES",
+        "icon": "glasses",
+        "on": "contact"
+      }
     },
     {
       "id": 56,
@@ -1188,7 +1301,13 @@
       "x": 900,
       "ash_cover": 0.25,
       "audio": "voice/scene_056.wav",
-      "duration": 4.61
+      "duration": 4.61,
+      "overlay": {
+        "type": "tip",
+        "text": "WIPE ASH OFF PETS' PAWS",
+        "icon": "dog",
+        "on": "paws"
+      }
     },
     {
       "id": 57,
@@ -1231,7 +1350,12 @@
       "x": 1150,
       "ash_cover": 0.5,
       "audio": "voice/scene_058.wav",
-      "duration": 2.89
+      "duration": 2.89,
+      "overlay": {
+        "type": "measure",
+        "value": 6,
+        "on": "six"
+      }
     },
     {
       "id": 59,
@@ -1250,7 +1374,16 @@
       "x": 700,
       "ash_cover": 0.3,
       "audio": "voice/scene_059.wav",
-      "duration": 3.53
+      "duration": 3.53,
+      "overlay": {
+        "type": "counter",
+        "items": [
+          "30 GAL|drop",
+          "1 SCRATCH|glasses",
+          "1 DOG|dog"
+        ],
+        "at": 0.0
+      }
     },
     {
       "id": 60,
@@ -1341,7 +1474,12 @@
       "character": false,
       "ash_cover": 0.55,
       "audio": "voice/scene_063.wav",
-      "duration": 3.539
+      "duration": 3.539,
+      "overlay": {
+        "type": "question",
+        "text": "WHICH RULE WOULD YOU BREAK FIRST?",
+        "on": "Which"
+      }
     }
   ],
   "voice": {

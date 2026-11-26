@@ -46,9 +46,19 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
     "ash_cover": 0.8,                                   // 0–1, how grey the world is
     "x": 900, "x_to": 1300, "y": 760, "facing": "right", // optional staging (y = feet height, e.g. on a bed)
     "character": false,                                 // optional: shot without the main character
+    "overlay": {"type": "stat", "text": "31 GALLONS", "icon": "drop", "on": "Thirty"},  // optional, or a list
     "duration": 2.41, "audio": "voice/scene_001.wav"    // written by the voice step
   } ] }
 ```
+- **On-screen visuals (overlay)** — add one whenever the narrator says a number, measurement, time,
+  rule, problem, tip or fact. Types: `stat` (big number that counts up), `measure` (`value` in cm →
+  animated ruler), `time` ("6:12 PM"), `rule` / `problem` (`label` "RULE 2" + `text`), `tip`, `fact`,
+  `alert` (phone emergency alert), `checklist` (`items`, ticks one by one), `counter` (`items` like
+  `"30 GAL|drop"`), `question` (end-of-episode comment question, centred at the bottom).
+  Icons: drop, ruler, mountain, clock, warning, dog, glasses, mask, battery, phone, home, check.
+  `on` = the word that triggers it (must be in the text); or `at` = seconds into the scene.
+  The camera automatically moves the character to the left third so the card never covers the face,
+  and a soft "pop" sound plays when it appears. Keep card text short (≤ 5 words) and in CAPITALS.
 - Places: valley, farmhouse, road, living_room, kitchen, back_yard, hallway, workshop, bedroom,
   bedroom_collapsed, porch, garden, pantry, front_door, town_street, riverbed, hillside,
   ranger_station, ranger_inside, ridge_top. New places go in `src/places/index.tsx`.
@@ -60,7 +70,7 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
 - Sounds (made in code, `scripts/sound.py`): ambient — wind, ash_hiss, rumble, rain, lahar_roar,
   fire, crowd, heartbeat; one-shots — footsteps, run_steps, creak, door, door_slam, phone_alert,
   car_away, dog_bark, dog_whine, squeak, pour, rattle, wipe, thunder, whoosh, boom, click,
-  power_down, splash, lid, sniff. A file `sfx/<name>.wav|mp3` overrides the built-in sound or adds
+  power_down, splash, lid, sniff, pop, tick. A file `sfx/<name>.wav|mp3` overrides the built-in sound or adds
   a new one. A file in `music/` (or `music/epN.mp3`) replaces the synth music bed.
 
 ## Quality rules (check every episode)
@@ -70,6 +80,7 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
   sentences into two scenes.
 - The character is always doing something; vary pose/shot/camera between neighbouring scenes.
 - Arms never cross the head (the rig enforces it). Day titles only on wide shots.
+- Every number, rule and tip the narrator says gets an on-screen overlay.
 - Music ≈ 20 dB under the voice, loudest effect ≥ 9 dB under; master −14 LUFS. `sound` prints the
   measured numbers — report them.
 - Survival tips must come from the bible's FACTS LIST. No gore, no real brands or people.

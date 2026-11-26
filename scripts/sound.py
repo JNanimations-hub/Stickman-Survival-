@@ -340,11 +340,23 @@ def sniff(d=0.8):
     return norm(x)
 
 
+def pop(d=0.25):
+    # soft "bubble" pop for on-screen visuals
+    t = np.arange(_n(d)) / SR
+    f = 320 + 700 * np.exp(-t / 0.03)
+    return norm(tone(f, d) * np.exp(-t / 0.05) + 0.2 * bp(white(d, "pop"), 1500, 5000) * np.exp(-t / 0.01))
+
+
+def tick(d=0.15):
+    t = np.arange(_n(d)) / SR
+    return norm(np.sin(2 * np.pi * 1800 * t) * np.exp(-t / 0.015))
+
+
 ONESHOT = {
     "footsteps": footsteps, "run_steps": run_steps, "creak": creak, "door": door, "door_slam": door_slam,
     "phone_alert": phone_alert, "car_away": car_away, "dog_bark": dog_bark, "dog_whine": dog_whine,
     "squeak": squeak, "pour": pour, "rattle": rattle, "wipe": wipe, "thunder": thunder, "whoosh": whoosh,
-    "boom": boom, "click": click, "power_down": power_down, "splash": splash, "lid": lid, "sniff": sniff,
+    "boom": boom, "click": click, "pop": pop, "tick": tick, "power_down": power_down, "splash": splash, "lid": lid, "sniff": sniff,
 }
 ALL_SFX = sorted(list(AMBIENT) + list(ONESHOT))
 

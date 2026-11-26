@@ -10,6 +10,7 @@ import { Crowd } from "../extras/Zombie";
 import { Falling, Fire, Smoke, PoliceLights, Lightning, Lahar, CarAway } from "../extras/Effects";
 import { LOOKS, INK } from "../kit/light";
 import { eio, eback, ramp, rnd } from "../kit/helpers";
+import { OverlayView, overlayStart } from "./Overlay";
 
 // Anton (SIL Open Font License) is kept in public/fonts so renders never need the internet.
 export const TITLE_FONT = "Anton";
@@ -46,6 +47,9 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
   if (s.camera === "still") z *= 1 + 0.03 * t;
   if (s.camera === "pan_left") fx += (1 - 2 * t) * (130 / z);
   if (s.camera === "pan_right") fx -= (1 - 2 * t) * (130 / z);
+  // with an on-screen card (not centred), slide the camera so the character sits in the left third
+  const hasSideOverlay = (Array.isArray(s.overlay) ? s.overlay : s.overlay ? [s.overlay] : []).some((o) => (o.side ?? "auto") !== "center" && o.type !== "question");
+  if (hasSideOverlay && s.character !== false && s.shot !== "wide") fx += 330 / z;
   // keep the view inside the drawn world
   const hw = 960 / z, hh = 540 / z;
   fx = Math.min(2080 - hw, Math.max(-160 + hw, fx));
@@ -100,6 +104,10 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
         <rect x={0} y={0} width={1920} height={1080} fill="url(#vig)" />
       </svg>
       {s.day_title && <DayTitle text={s.day_title} f={f} frames={frames} />}
+      {(Array.isArray(s.overlay) ? s.overlay : s.overlay ? [s.overlay] : []).map((o, i) => (
+        <OverlayView key={i} o={o} f={f} frames={frames} startFrame={overlayStart(o, s.text, frames)}
+          charSide={s.character === false ? "left" : 960 + (cx - fx) * z > 960 ? "right" : "left"} />
+      ))}
     </AbsoluteFill>
   );
 };

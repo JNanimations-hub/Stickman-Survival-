@@ -42,6 +42,25 @@ EXTRAS = ["zombies", "fire", "smoke", "police_lights", "rain", "snow", "ash", "l
           "flashlight", "phone_glow"]
 SHOTS, CAMS = ["wide", "medium", "closeup"], ["push_in", "pan_left", "pan_right", "shake", "still"]
 TODS = ["morning", "day", "dusk", "night"]
+OVERLAYS = ["stat", "measure", "time", "rule", "problem", "tip", "fact", "alert", "checklist", "counter", "question"]
+ICONS = ["drop", "ruler", "mountain", "clock", "warning", "dog", "glasses", "mask", "battery", "phone", "home", "check", "none"]
+
+
+def overlays(s):
+    o = s.get("overlay")
+    return o if isinstance(o, list) else ([o] if o else [])
+
+
+def overlay_start(o, text, frames):
+    """Same rule as src/scenes/Overlay.tsx → seconds into the scene."""
+    if o.get("at") is not None:
+        return float(o["at"])
+    if o.get("on"):
+        i = text.lower().find(o["on"].lower())
+        if i >= 0:
+            speech = max(0.3, frames / FPS - LEAD - 0.2)
+            return max(2, round((LEAD + i / max(1, len(text)) * speech) * FPS) - 3) / FPS
+    return 6 / FPS
 DOGS = ["none", "sit", "stand", "walk", "run", "lie", "carried", "window"]
 
 
@@ -77,6 +96,15 @@ def cmd_check(n, quiet=False):
         for e in (s.get("extras") or {}):
             if e not in EXTRAS:
                 problems.append(f"scene {sid}: unknown extra '{e}'")
+        for o in overlays(s):
+            if o.get("type") not in OVERLAYS:
+                problems.append(f"scene {sid}: overlay type '{o.get('type')}' is not one of {OVERLAYS}")
+            if o.get("icon") and o["icon"] not in ICONS:
+                problems.append(f"scene {sid}: overlay icon '{o['icon']}' is not one of {ICONS}")
+            if o.get("on") and o["on"].lower() not in s["text"].lower():
+                problems.append(f"scene {sid}: overlay word '{o['on']}' is not in the narration")
+            if s.get("day_title"):
+                warn.append(f"scene {sid} has a day title AND an overlay: they may overlap")
         if s.get("dog", "none") not in DOGS:
             problems.append(f"scene {sid}: dog '{s.get('dog')}' is not one of {DOGS}")
         for fx in s.get("sfx", []):
@@ -188,7 +216,8 @@ def build_sound(n, timed, total_frames, out_name):
     for s in timed:
         t0 = s["from"] / FPS
         dur = s["frames"] / FPS
-        for spec in s.get("sfx", []):
+        specs = list(s.get("sfx", [])) + [f"pop@{overlay_start(o, s['text'], s['frames']) + 0.05:.2f}" for o in overlays(s)]
+        for spec in specs:
             name, _, off = spec.partition("@")
             off = float(off) if off else 0.12
             user = find_user_sfx(name)
