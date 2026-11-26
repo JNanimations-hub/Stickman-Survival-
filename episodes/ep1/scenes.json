@@ -1,0 +1,1230 @@
+{
+  "episode": 1,
+  "title": "Ashfall: 24 Hours Survival Under a Volcano (Part 1)",
+  "scenes": [
+    {
+      "id": 1,
+      "text": "If you ever hear a roar coming down a dry riverbed, don't look back.",
+      "place": "riverbed",
+      "time_of_day": "day",
+      "pose": "looking",
+      "face": "scared",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.5
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "rumble"
+      ],
+      "dog": "stand",
+      "ash_cover": 0.8,
+      "audio": "voice/scene_001.wav",
+      "duration": 4.48
+    },
+    {
+      "id": 2,
+      "text": "Run uphill.",
+      "place": "riverbed",
+      "time_of_day": "day",
+      "pose": "running",
+      "face": "determined",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.5
+      },
+      "camera": "shake",
+      "day_title": null,
+      "sfx": [
+        "run_steps",
+        "lahar_roar"
+      ],
+      "dog": "run",
+      "ash_cover": 0.8,
+      "audio": "voice/scene_002.wav",
+      "duration": 1.17
+    },
+    {
+      "id": 3,
+      "text": "The ground under your boots starts to hum.",
+      "place": "riverbed",
+      "time_of_day": "day",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.4
+      },
+      "camera": "shake",
+      "day_title": "DAY 60",
+      "sfx": [
+        "rumble"
+      ],
+      "dog": "stand",
+      "ash_cover": 0.8,
+      "audio": "voice/scene_003.wav",
+      "duration": 2.41
+    },
+    {
+      "id": 4,
+      "text": "Your dog won't move. His ears are straight up.",
+      "place": "riverbed",
+      "time_of_day": "day",
+      "pose": "pointing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.4
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "dog_whine"
+      ],
+      "dog": "stand",
+      "ash_cover": 0.8
+    },
+    {
+      "id": 5,
+      "text": "Behind you, a grey wall is pouring down the valley.",
+      "place": "riverbed",
+      "time_of_day": "day",
+      "pose": "running",
+      "face": "shocked",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.4,
+        "lahar": true
+      },
+      "camera": "shake",
+      "day_title": null,
+      "sfx": [
+        "lahar_roar"
+      ],
+      "dog": "run",
+      "ash_cover": 0.8
+    },
+    {
+      "id": 6,
+      "text": "To understand how you got here, we have to go back.",
+      "place": "valley",
+      "time_of_day": "day",
+      "pose": "standing",
+      "face": "neutral",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "whoosh"
+      ],
+      "ash_cover": 0
+    },
+    {
+      "id": 7,
+      "text": "Six twelve in the evening. Ember Valley.",
+      "place": "valley",
+      "time_of_day": "dusk",
+      "pose": "walking",
+      "face": "neutral",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "pan_right",
+      "day_title": "DAY 1",
+      "sfx": [
+        "wind",
+        "footsteps"
+      ],
+      "ash_cover": 0
+    },
+    {
+      "id": 8,
+      "text": "A quiet farm town at the foot of Mount Grael.",
+      "place": "farmhouse",
+      "time_of_day": "dusk",
+      "pose": "walking",
+      "face": "happy",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "wind",
+        "footsteps"
+      ],
+      "ash_cover": 0,
+      "x": 200
+    },
+    {
+      "id": 9,
+      "text": "The mountain has slept for six hundred years.",
+      "place": "valley",
+      "time_of_day": "dusk",
+      "pose": "standing",
+      "face": "neutral",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "character": false,
+      "ash_cover": 0
+    },
+    {
+      "id": 10,
+      "text": "Tonight, the plates on your shelf begin to rattle.",
+      "place": "kitchen",
+      "time_of_day": "dusk",
+      "pose": "looking",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {
+        "eruption": true
+      },
+      "camera": "shake",
+      "day_title": null,
+      "sfx": [
+        "rattle",
+        "rumble"
+      ],
+      "ash_cover": 0,
+      "x": 600
+    },
+    {
+      "id": 11,
+      "text": "Then every phone in town buzzes at once.",
+      "place": "kitchen",
+      "time_of_day": "dusk",
+      "pose": "holding",
+      "face": "shocked",
+      "props": [
+        "phone"
+      ],
+      "shot": "closeup",
+      "extras": {
+        "eruption": true
+      },
+      "camera": "shake",
+      "day_title": null,
+      "sfx": [
+        "phone_alert"
+      ],
+      "ash_cover": 0,
+      "x": 600
+    },
+    {
+      "id": 12,
+      "text": "\"Ash fall expected. Stay indoors.\"",
+      "place": "kitchen",
+      "time_of_day": "dusk",
+      "pose": "holding",
+      "face": "scared",
+      "props": [
+        "phone"
+      ],
+      "shot": "medium",
+      "extras": {
+        "eruption": true
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "phone_alert@0.3"
+      ],
+      "ash_cover": 0,
+      "x": 600
+    },
+    {
+      "id": 13,
+      "text": "Across the road, your neighbours throw bags into their car and speed away.",
+      "place": "road",
+      "time_of_day": "dusk",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "eruption": true,
+        "car": true
+      },
+      "camera": "pan_right",
+      "day_title": null,
+      "sfx": [
+        "car_away",
+        "rumble"
+      ],
+      "ash_cover": 0,
+      "x": 330
+    },
+    {
+      "id": 14,
+      "text": "They leave something behind.",
+      "place": "road",
+      "time_of_day": "dusk",
+      "pose": "looking",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {
+        "eruption": true
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "ash_cover": 0,
+      "x": 330
+    },
+    {
+      "id": 15,
+      "text": "A small brown dog with one floppy ear, sitting alone in the road.",
+      "place": "road",
+      "time_of_day": "dusk",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "eruption": true
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "dog_whine@0.8",
+        "wind"
+      ],
+      "dog": "sit",
+      "character": false,
+      "ash_cover": 0
+    },
+    {
+      "id": 16,
+      "text": "You open the door. He runs straight in.",
+      "place": "porch",
+      "time_of_day": "dusk",
+      "pose": "standing",
+      "face": "happy",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "eruption": true
+      },
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "door",
+        "run_steps@0.9"
+      ],
+      "dog": "run",
+      "x": 380,
+      "ash_cover": 0
+    },
+    {
+      "id": 17,
+      "text": "You call him Pebble.",
+      "place": "living_room",
+      "time_of_day": "dusk",
+      "pose": "hugging",
+      "face": "happy",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "dog_bark@0.6"
+      ],
+      "dog": "carried",
+      "ash_cover": 0
+    },
+    {
+      "id": 18,
+      "text": "First problem: the air.",
+      "place": "living_room",
+      "time_of_day": "dusk",
+      "pose": "standing",
+      "face": "determined",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "whoosh"
+      ],
+      "ash_cover": 0
+    },
+    {
+      "id": 19,
+      "text": "Ash rides the wind.",
+      "place": "living_room",
+      "time_of_day": "dusk",
+      "pose": "looking",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "pan_left",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "x": 930,
+      "ash_cover": 0.05
+    },
+    {
+      "id": 20,
+      "text": "It gets in through windows, chimneys, even the kitchen fan.",
+      "place": "kitchen",
+      "time_of_day": "dusk",
+      "pose": "pointing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "pan_right",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "x": 900,
+      "ash_cover": 0.05
+    },
+    {
+      "id": 21,
+      "text": "So you close every window.",
+      "place": "living_room",
+      "time_of_day": "dusk",
+      "pose": "reaching",
+      "face": "determined",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "click",
+        "door_slam@0.6"
+      ],
+      "x": 740,
+      "ash_cover": 0.05
+    },
+    {
+      "id": 22,
+      "text": "You shut the chimney flue.",
+      "place": "living_room",
+      "time_of_day": "dusk",
+      "pose": "reaching",
+      "face": "determined",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "lid"
+      ],
+      "x": 300,
+      "ash_cover": 0.05
+    },
+    {
+      "id": 23,
+      "text": "You switch off every fan.",
+      "place": "kitchen",
+      "time_of_day": "dusk",
+      "pose": "reaching",
+      "face": "determined",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "power_down"
+      ],
+      "x": 1150,
+      "ash_cover": 0.05
+    },
+    {
+      "id": 24,
+      "text": "You roll wet towels along the bottom of the doors.",
+      "place": "hallway",
+      "time_of_day": "dusk",
+      "pose": "crouching",
+      "face": "determined",
+      "props": [
+        "towel"
+      ],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "wipe"
+      ],
+      "x": 1110,
+      "facing": "right",
+      "ash_cover": 0.05
+    },
+    {
+      "id": 25,
+      "text": "Nine forty. Something grey drifts past the porch light.",
+      "place": "porch",
+      "time_of_day": "night",
+      "pose": "looking",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.35
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "ash_hiss"
+      ],
+      "x": 380,
+      "ash_cover": 0.05
+    },
+    {
+      "id": 26,
+      "text": "It looks like snow. It isn't.",
+      "place": "porch",
+      "time_of_day": "night",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "closeup",
+      "extras": {
+        "ash": 0.45
+      },
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "ash_hiss"
+      ],
+      "x": 380,
+      "ash_cover": 0.08
+    },
+    {
+      "id": 27,
+      "text": "You step on it, and it squeaks.",
+      "place": "porch",
+      "time_of_day": "night",
+      "pose": "walking",
+      "face": "shocked",
+      "props": [],
+      "shot": "medium",
+      "extras": {
+        "ash": 0.45
+      },
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "squeak@0.7",
+        "ash_hiss"
+      ],
+      "x": 600,
+      "ash_cover": 0.1,
+      "dog": "sit"
+    },
+    {
+      "id": 28,
+      "text": "Volcanic ash isn't soft like campfire ash.",
+      "place": "porch",
+      "time_of_day": "night",
+      "pose": "crouching",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {
+        "ash": 0.45
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "ash_hiss"
+      ],
+      "x": 800,
+      "ash_cover": 0.1
+    },
+    {
+      "id": 29,
+      "text": "It's tiny pieces of rock and glass.",
+      "place": "porch",
+      "time_of_day": "night",
+      "pose": "crouching",
+      "face": "shocked",
+      "props": [],
+      "shot": "closeup",
+      "extras": {
+        "ash": 0.45
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "ash_hiss"
+      ],
+      "x": 800,
+      "ash_cover": 0.1
+    },
+    {
+      "id": 30,
+      "text": "Second problem: water.",
+      "place": "kitchen",
+      "time_of_day": "night",
+      "pose": "standing",
+      "face": "determined",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "whoosh"
+      ],
+      "ash_cover": 0.1
+    },
+    {
+      "id": 31,
+      "text": "Ash falls into rain barrels and tanks and makes the water dirty.",
+      "place": "back_yard",
+      "time_of_day": "night",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.55
+      },
+      "camera": "pan_right",
+      "day_title": null,
+      "sfx": [
+        "ash_hiss"
+      ],
+      "character": false,
+      "ash_cover": 0.12
+    },
+    {
+      "id": 32,
+      "text": "So tonight, before it gets worse,",
+      "place": "kitchen",
+      "time_of_day": "night",
+      "pose": "walking",
+      "face": "determined",
+      "props": [
+        "bottle"
+      ],
+      "shot": "wide",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "footsteps"
+      ],
+      "x": 300,
+      "ash_cover": 0.12
+    },
+    {
+      "id": 33,
+      "text": "you fill every bottle, every pot, every jug.",
+      "place": "kitchen",
+      "time_of_day": "night",
+      "pose": "carrying",
+      "face": "determined",
+      "props": [
+        "pot"
+      ],
+      "shot": "medium",
+      "extras": {},
+      "camera": "pan_right",
+      "day_title": null,
+      "sfx": [
+        "pour"
+      ],
+      "x": 900,
+      "ash_cover": 0.12
+    },
+    {
+      "id": 34,
+      "text": "One person needs about a gallon a day.",
+      "place": "kitchen",
+      "time_of_day": "night",
+      "pose": "holding",
+      "face": "determined",
+      "props": [
+        "jug"
+      ],
+      "shot": "medium",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.12
+    },
+    {
+      "id": 35,
+      "text": "Pebble needs some too.",
+      "place": "kitchen",
+      "time_of_day": "night",
+      "pose": "crouching",
+      "face": "happy",
+      "props": [
+        "bottle"
+      ],
+      "shot": "wide",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "sniff"
+      ],
+      "dog": "sit",
+      "ash_cover": 0.12
+    },
+    {
+      "id": 36,
+      "text": "You count. Thirty-one gallons.",
+      "place": "kitchen",
+      "time_of_day": "night",
+      "pose": "pointing",
+      "face": "determined",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.12
+    },
+    {
+      "id": 37,
+      "text": "You put the lid on the rain barrel, and a heavy stone on top.",
+      "place": "back_yard",
+      "time_of_day": "night",
+      "pose": "carrying",
+      "face": "determined",
+      "props": [
+        "stone"
+      ],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.6
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "lid@2.4",
+        "ash_hiss"
+      ],
+      "x": 780,
+      "facing": "left",
+      "x_to": 700,
+      "ash_cover": 0.15
+    },
+    {
+      "id": 38,
+      "text": "Seven in the morning. The world outside is grey.",
+      "place": "farmhouse",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "neutral",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.45
+      },
+      "camera": "pan_left",
+      "day_title": "DAY 2",
+      "sfx": [
+        "wind"
+      ],
+      "character": false,
+      "ash_cover": 0.45
+    },
+    {
+      "id": 39,
+      "text": "No birds. No cars. No sun.",
+      "place": "road",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "neutral",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.45
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "character": false,
+      "ash_cover": 0.45
+    },
+    {
+      "id": 40,
+      "text": "The ruler on the windowsill says two centimetres.",
+      "place": "bedroom",
+      "time_of_day": "morning",
+      "pose": "looking",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [],
+      "x": 1150,
+      "ash_cover": 0.17
+    },
+    {
+      "id": 41,
+      "text": "And the back door is open a crack.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "shocked",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.35
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "creak"
+      ],
+      "character": false,
+      "ash_cover": 0.3
+    },
+    {
+      "id": 42,
+      "text": "Pebble is out in the yard, sneezing and rolling in the ash.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.35
+      },
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "sniff",
+        "ash_hiss"
+      ],
+      "character": false,
+      "dog": "lie",
+      "ash_cover": 0.3
+    },
+    {
+      "id": 43,
+      "text": "Rule two: never go back outside for anything.",
+      "place": "hallway",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "heartbeat"
+      ],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 44,
+      "text": "You go anyway.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "running",
+      "face": "determined",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.5
+      },
+      "camera": "shake",
+      "day_title": null,
+      "sfx": [
+        "run_steps",
+        "door"
+      ],
+      "x": 300,
+      "ash_cover": 0.3
+    },
+    {
+      "id": 45,
+      "text": "Ash hits your face.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "scared",
+      "props": [],
+      "shot": "closeup",
+      "extras": {
+        "ash": 0.9
+      },
+      "camera": "shake",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "ash_cover": 0.3
+    },
+    {
+      "id": 46,
+      "text": "It slips behind your glasses, and you rub your eye.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "tired",
+      "props": [],
+      "shot": "closeup",
+      "extras": {
+        "ash": 0.8
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "wind"
+      ],
+      "ash_cover": 0.3
+    },
+    {
+      "id": 47,
+      "text": "Don't.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "shocked",
+      "props": [],
+      "shot": "closeup",
+      "extras": {
+        "ash": 0.8
+      },
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "whoosh"
+      ],
+      "ash_cover": 0.3
+    },
+    {
+      "id": 48,
+      "text": "Ash scratches an eye the way sand scratches a window.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 49,
+      "text": "Rinse it with clean water instead.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "crouching",
+      "face": "determined",
+      "props": [
+        "bottle"
+      ],
+      "shot": "medium",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "pour"
+      ],
+      "x": 1150,
+      "ash_cover": 0.2
+    },
+    {
+      "id": 50,
+      "text": "You scoop up Pebble and run back in.",
+      "place": "back_yard",
+      "time_of_day": "morning",
+      "pose": "carrying",
+      "face": "determined",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "ash": 0.6
+      },
+      "camera": "pan_left",
+      "day_title": null,
+      "sfx": [
+        "run_steps",
+        "door_slam@1.8"
+      ],
+      "dog": "carried",
+      "x": 1100,
+      "facing": "left",
+      "x_to": 330,
+      "ash_cover": 0.3
+    },
+    {
+      "id": 51,
+      "text": "Your eye stings.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "tired",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 52,
+      "text": "Your glasses have a tiny scratch now, right in the middle.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "worried",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 53,
+      "text": "And without your glasses, you can barely see your own hand.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "pointing",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 54,
+      "text": "So you make a promise. Glasses on. Always.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "determined",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 55,
+      "text": "Never contact lenses in ash.",
+      "place": "kitchen",
+      "time_of_day": "morning",
+      "pose": "standing",
+      "face": "determined",
+      "props": [],
+      "shot": "closeup",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "ash_cover": 0.2
+    },
+    {
+      "id": 56,
+      "text": "You wipe Pebble's paws, one by one, so he doesn't lick the glass off them.",
+      "place": "hallway",
+      "time_of_day": "day",
+      "pose": "kneeling",
+      "face": "determined",
+      "props": [
+        "towel"
+      ],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "wipe"
+      ],
+      "dog": "sit",
+      "x": 900,
+      "ash_cover": 0.25
+    },
+    {
+      "id": 57,
+      "text": "He licks your hand instead.",
+      "place": "hallway",
+      "time_of_day": "day",
+      "pose": "kneeling",
+      "face": "happy",
+      "props": [
+        "towel"
+      ],
+      "shot": "medium",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [
+        "sniff"
+      ],
+      "dog": "stand",
+      "x": 900,
+      "ash_cover": 0.25
+    },
+    {
+      "id": 58,
+      "text": "Evening. The ruler says six centimetres.",
+      "place": "bedroom",
+      "time_of_day": "dusk",
+      "pose": "looking",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "ash_hiss"
+      ],
+      "x": 1150,
+      "ash_cover": 0.5
+    },
+    {
+      "id": 59,
+      "text": "Thirty gallons. One scratch. One dog.",
+      "place": "living_room",
+      "time_of_day": "dusk",
+      "pose": "sitting",
+      "face": "tired",
+      "props": [],
+      "shot": "wide",
+      "extras": {},
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "dog": "lie",
+      "x": 700,
+      "ash_cover": 0.3
+    },
+    {
+      "id": 60,
+      "text": "And above your bed, for the first time, the roof gives a long, slow creak.",
+      "place": "bedroom",
+      "time_of_day": "night",
+      "pose": "sleeping",
+      "face": "tired",
+      "props": [],
+      "shot": "medium",
+      "extras": {},
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "creak@2.2"
+      ],
+      "dog": "sit",
+      "x": 820,
+      "ash_cover": 0.5
+    },
+    {
+      "id": 61,
+      "text": "In Part 2, the lights go out, and the sky starts to flash.",
+      "place": "living_room",
+      "time_of_day": "night",
+      "pose": "holding",
+      "face": "scared",
+      "props": [
+        "flashlight"
+      ],
+      "shot": "wide",
+      "extras": {
+        "lightning": true,
+        "flashlight": true
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "power_down",
+        "thunder@1.2"
+      ],
+      "x": 500,
+      "ash_cover": 0.4
+    },
+    {
+      "id": 62,
+      "text": "Pebble broke a rule. So did you.",
+      "place": "living_room",
+      "time_of_day": "night",
+      "pose": "hugging",
+      "face": "worried",
+      "props": [],
+      "shot": "medium",
+      "extras": {
+        "flashlight": true
+      },
+      "camera": "still",
+      "day_title": null,
+      "sfx": [],
+      "dog": "carried",
+      "ash_cover": 0.4
+    },
+    {
+      "id": 63,
+      "text": "Which rule would YOU break first? Tell me in the comments.",
+      "place": "farmhouse",
+      "time_of_day": "night",
+      "pose": "standing",
+      "face": "neutral",
+      "props": [],
+      "shot": "wide",
+      "extras": {
+        "eruption": true,
+        "ash": 0.5
+      },
+      "camera": "push_in",
+      "day_title": null,
+      "sfx": [
+        "rumble"
+      ],
+      "character": false,
+      "ash_cover": 0.55
+    }
+  ],
+  "voice": {
+    "voice_id": "ZmqEPiBIr4itJeB29TyD",
+    "model_id": "eleven_v3"
+  }
+}

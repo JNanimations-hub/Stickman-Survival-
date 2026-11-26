@@ -4,7 +4,7 @@ export type TimeOfDay = "morning" | "day" | "dusk" | "night";
 export type FaceMood = "worried" | "scared" | "determined" | "happy" | "tired" | "neutral" | "shocked" | "sleep";
 export type Pose =
   | "standing" | "walking" | "running" | "carrying" | "crouching" | "kneeling"
-  | "pointing" | "arms_up" | "sitting" | "sleeping" | "looking" | "reaching" | "hugging";
+  | "pointing" | "holding" | "arms_up" | "sitting" | "sleeping" | "looking" | "reaching" | "hugging";
 export type Shot = "wide" | "medium" | "closeup";
 export type CameraMove = "push_in" | "pan_left" | "pan_right" | "shake" | "still";
 export type DogPose = "none" | "sit" | "stand" | "walk" | "run" | "lie" | "carried" | "window";
@@ -39,6 +39,7 @@ export interface SceneData {
   day_title: string | null;
   sfx: string[];
   // optional staging
+  character?: boolean;     // false = scene without the main character (establishing shots)
   dog?: DogPose;
   x?: number;              // character x in the place (0–1920); default = the place's spot
   x_to?: number;           // walk/run to this x during the scene
@@ -54,10 +55,10 @@ export interface TimedScene extends SceneData {
   frames: number;          // length in frames
 }
 
-export interface EpisodeData {
+export type EpisodeData = {
   episode: number;
   title: string;
   fps: number;
   audio: string | null;    // path under public/, e.g. "ep1/mix.wav"
   scenes: TimedScene[];
-}
+};

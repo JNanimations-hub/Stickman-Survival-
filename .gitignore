@@ -7,3 +7,5 @@ episodes/*/episode_*.mp4
 episodes/*/preview*.mp4
 episodes/*/sample*.mp4
 public/ep*/
+__pycache__/
+episodes/*/*.props.json
