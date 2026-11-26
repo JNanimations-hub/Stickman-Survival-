@@ -31,13 +31,14 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
   const dirSign = facing === "left" ? -1 : 1;
   const x1 = s.x_to ?? (moving ? x0 + dirSign * (s.pose === "running" ? 520 : 260) * sc : x0);
   const cx = x0 + (x1 - x0) * ramp(f, 0, frames);
-  const floor = place.floorY;
+  const floor = s.y ?? place.floorY;
 
   // camera: shot size → zoom, focus on the character
   const figH = FIGURE_HEIGHT * sc;
   const headY = floor + HEAD_Y * sc;
   let z = 1, fx = 960, fy = 540;
   if (s.character === false) { z = s.shot === "wide" ? 1.06 : s.shot === "medium" ? 1.35 : 1.8; }
+  else if (s.pose === "sleeping") { z = s.shot === "closeup" ? 2.2 : s.shot === "medium" ? 1.5 : 1.06; fx = cx; fy = floor - 140 * sc; }
   else if (s.shot === "medium") { z = Math.max(1.25, (1080 * 0.78) / figH); fx = cx; fy = floor - figH * 0.55; }
   else if (s.shot === "closeup") { z = 360 / (2 * 80 * sc); fx = cx + 10 * sc * dirSign; fy = headY + 20 * sc; }
   else { z = 1.06; fx = 960; fy = 540; }
@@ -69,7 +70,7 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
           </g>
           {ex.smoke && <Smoke x={1500} y={floor - 40} f={f} dark />}
           {ex.fire && <Fire x={1500} y={floor} f={f} s={sc * 1.2} />}
-          {ex.lahar && <Lahar f={f} y={place.floorY + (s.place === "hillside" ? 160 : 40)} frames={frames} />}
+          {ex.lahar && <Lahar f={f} y={place.floorY + (s.place === "hillside" ? 160 : 40)} frames={frames} maxX={s.character === false || s.place === "hillside" ? 2400 : cx - 170 * sc} />}
           {ex.car && <CarAway f={f} frames={frames} y={floor + 60} />}
           {(ex.zombies ?? 0) > 0 && <Crowd n={ex.zombies!} f={f} y={floor} x0={cx + 300} x1={1980} facing="left" />}
           {dogPose !== "none" && dogPose !== "carried" && (

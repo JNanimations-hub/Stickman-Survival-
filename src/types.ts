@@ -42,7 +42,8 @@ export interface SceneData {
   character?: boolean;     // false = scene without the main character (establishing shots)
   dog?: DogPose;
   x?: number;              // character x in the place (0–1920); default = the place's spot
-  x_to?: number;           // walk/run to this x during the scene
+  x_to?: number;
+  y?: number;              // feet y override (e.g. lying on the bed); default = the place floor           // walk/run to this x during the scene
   facing?: "left" | "right";
   ash_cover?: number;      // 0–1: how grey/buried the world looks
   // filled by the voice step

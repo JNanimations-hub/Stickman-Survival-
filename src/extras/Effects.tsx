@@ -75,8 +75,9 @@ export const Lightning: React.FC<{ f: number; seed?: number }> = ({ f, seed = 0 
 };
 
 // Lahar: a churning wall of grey mud and debris sweeping left → right across the floor line.
-export const Lahar: React.FC<{ f: number; y: number; frames: number }> = ({ f, y, frames }) => {
-  const front = -400 + (f / Math.max(1, frames)) * 2600;
+export const Lahar: React.FC<{ f: number; y: number; frames: number; maxX?: number }> = ({ f, y, frames, maxX = 2400 }) => {
+  // the front surges in fast, then stays just behind maxX (right behind the character)
+  const front = Math.min(maxX, -400 + (f / Math.max(1, frames)) * 2600) + Math.sin(f * 0.3) * 12;
   const top = (x: number) => y - 140 + Math.sin(x * 0.012 + f * 0.25) * 22 + Math.sin(x * 0.031 - f * 0.4) * 10;
   let d = `M -400 ${y + 400} L -400 ${top(-400)}`;
   for (let x = -400; x <= front; x += 40) d += ` L ${x} ${top(x)}`;

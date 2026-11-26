@@ -1268,10 +1268,11 @@
         "creak@2.2"
       ],
       "dog": "sit",
-      "x": 820,
+      "x": 1000,
       "ash_cover": 0.5,
       "audio": "voice/scene_060.wav",
-      "duration": 5.42
+      "duration": 5.42,
+      "y": 760
     },
     {
       "id": 61,

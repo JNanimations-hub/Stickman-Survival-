@@ -44,7 +44,7 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
     "sfx": ["rumble", "door@1.2"],                      // name or name@seconds-into-scene
     "dog": "run",                                       // none | sit | stand | walk | run | lie | carried | window
     "ash_cover": 0.8,                                   // 0–1, how grey the world is
-    "x": 900, "x_to": 1300, "facing": "right",          // optional staging
+    "x": 900, "x_to": 1300, "y": 760, "facing": "right", // optional staging (y = feet height, e.g. on a bed)
     "character": false,                                 // optional: shot without the main character
     "duration": 2.41, "audio": "voice/scene_001.wav"    // written by the voice step
   } ] }
