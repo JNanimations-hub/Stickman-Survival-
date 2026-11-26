@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+out/
+*.log
+# rendered media is large; keep it out of git (re-render any time)
+episodes/*/episode_*.mp4
+episodes/*/preview*.mp4
+episodes/*/sample*.mp4
+public/ep*/
