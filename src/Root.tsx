@@ -4,6 +4,7 @@ import { Sheet, Sheet2 } from "./scenes/Sheet";
 import { Episode, episodeMetadata } from "./scenes/Episode";
 import { Thumbnail, ThumbProps } from "./scenes/Thumbnail";
 import { EpisodeData } from "./types";
+import { Avatar, Banner } from "./scenes/Brand";
 
 // Default props only matter in the Studio preview; the pipeline always passes the real episode.
 const demo: EpisodeData = {
@@ -20,6 +21,8 @@ export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="Episode" component={Episode} width={1920} height={1080} fps={30} durationInFrames={120} defaultProps={demo} calculateMetadata={episodeMetadata} />
     <Still id="Thumbnail" component={Thumbnail} width={1280} height={720} defaultProps={thumb} />
+    <Still id="Avatar" component={Avatar} width={800} height={800} />
+    <Still id="Banner" component={Banner} width={2560} height={1440} />
     <Composition id="Sheet" component={Sheet} width={1920} height={1080} fps={30} durationInFrames={90} />
     <Composition id="Sheet2" component={Sheet2} width={1920} height={1080} fps={30} durationInFrames={90} />
   </>
