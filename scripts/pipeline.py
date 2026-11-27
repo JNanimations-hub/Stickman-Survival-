@@ -114,8 +114,9 @@ def cmd_check(n, quiet=False):
         if s.get("day_title") and s.get("shot") != "wide":
             warn.append(f"scene {sid} has a day title: use a wide shot so the title doesn't cover the face")
         d = s.get("duration") or estimate(s["text"])
+        pic = d / 2 if s.get("cut") else d  # a cut = two pictures in one line
         limit = 3.5 if t < 60 else 5.5
-        if d > limit:
+        if pic > limit:
             warn.append(f"scene {sid} lasts {d:.1f}s at {t:.0f}s in (aim ≤ {limit - 0.5:.0f}s): consider splitting it")
         t += d + GAP
     if not quiet:

@@ -96,6 +96,15 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
           {s.character !== false && <g transform={`translate(${cx} ${floor})`}>
             <Stickman pose={s.pose} face={s.face} f={f} props={props} facing={facing} scale={sc} seed={s.id * 3 + 1} />
           </g>}
+          {s.under_table && (
+            <g>
+              {/* a big table in FRONT of the character so he is clearly underneath it */}
+              <rect x={cx - 250} y={floor - 300} width={500} height={30} rx={6} fill="#a8774d" stroke={INK} strokeWidth={7} />
+              <rect x={cx - 250} y={floor - 272} width={500} height={14} fill="#8a5d39" stroke={INK} strokeWidth={4} />
+              <rect x={cx - 236} y={floor - 270} width={26} height={270} fill="#8a5d39" stroke={INK} strokeWidth={5} />
+              <rect x={cx + 210} y={floor - 270} width={26} height={270} fill="#8a5d39" stroke={INK} strokeWidth={5} />
+            </g>
+          )}
           {(ex.ash ?? 0) > 0 && place.outdoor && <Falling f={f} kind="ash" amount={ex.ash!} seed={`s${s.id}`} />}
           {ex.rain && <Falling f={f} kind="rain" amount={1} />}
           {ex.snow && <Falling f={f} kind="snow" amount={1} />}

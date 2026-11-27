@@ -47,6 +47,8 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
     "x": 900, "x_to": 1300, "y": 760, "facing": "right", // optional staging (y = feet height, e.g. on a bed)
     "character": false,                                 // optional: shot without the main character
     "focus": "dog",                                     // optional: camera on the dog, or [x, y] = on a spot (e.g. a map)
+    "cut": {"on": "word", "shot": "closeup"},           // optional: a 2nd picture inside a long line (voice unchanged)
+    "under_table": true,                                // optional: big table drawn in front (hiding under it)
     "dog_x": 930, "dog_y": 576,                         // optional dog position (930/576 = living-room windowsill)
     "overlay": {"type": "stat", "text": "31 GALLONS", "icon": "drop", "on": "Thirty"},  // optional, or a list
     "duration": 2.41, "audio": "voice/scene_001.wav"    // written by the voice step
@@ -80,8 +82,8 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
 ## Quality rules (check every episode)
 - Voice first: every scene lasts exactly its narration (+0.2 s gap). No gap over 0.5 s; pauses
   inside a line are cut to 0.3 s by `scripts/voice.py`.
-- Pacing: first minute a new picture every 2–3 s, then every 3–5 s (`check` warns). Split long
-  sentences into two scenes.
+- Pacing: first minute a new picture every 2–3 s, then every 3–5 s (`check` warns). Before the voice,
+  split long sentences into two scenes; after the voice, add a `cut` instead (no re-voicing needed).
 - The character is always doing something; vary pose/shot/camera between neighbouring scenes.
 - Arms never cross the head (the rig enforces it). Day titles only on wide shots.
 - Every number, rule and tip the narrator says gets an on-screen overlay.

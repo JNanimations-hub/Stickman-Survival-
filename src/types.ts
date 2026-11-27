@@ -41,7 +41,9 @@ export interface SceneData {
   sfx: string[];
   // optional staging
   character?: boolean;
-  overlay?: Overlay | Overlay[];   // on-screen numbers, rules, tips… (see src/scenes/Overlay.tsx)     // false = scene without the main character (establishing shots)
+  overlay?: Overlay | Overlay[];
+  under_table?: boolean;   // draw a big table in front: the character hides underneath
+  cut?: Partial<SceneData> & { on?: string; at?: number };  // second picture inside a long line (voice unchanged)   // on-screen numbers, rules, tips… (see src/scenes/Overlay.tsx)     // false = scene without the main character (establishing shots)
   dog?: DogPose;
   x?: number;              // character x in the place (0–1920); default = the place's spot
   x_to?: number;
