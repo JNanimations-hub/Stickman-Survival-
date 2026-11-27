@@ -103,7 +103,7 @@ def cmd_check(n, quiet=False):
                 problems.append(f"scene {sid}: overlay icon '{o['icon']}' is not one of {ICONS}")
             if o.get("on") and o["on"].lower() not in s["text"].lower():
                 problems.append(f"scene {sid}: overlay word '{o['on']}' is not in the narration")
-            if s.get("day_title"):
+            if s.get("day_title") and float(o.get("at", 0)) < 1.3:
                 warn.append(f"scene {sid} has a day title AND an overlay: they may overlap")
         if s.get("dog", "none") not in DOGS:
             problems.append(f"scene {sid}: dog '{s.get('dog')}' is not one of {DOGS}")

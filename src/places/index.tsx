@@ -75,6 +75,16 @@ const Kitchen: React.FC<PlaceProps> = (p) => (
     <Room wall="#dfe9d9" floor="#c7b08a" floorY={880} ash={p.ash * 0.3} id="kitchen">
       <InWindow x={1180} y={210} w={360} h={280} tod={p.tod} ash={p.ash} f={p.f} falling={p.ash > 0 ? 1 : 0} id="kitchen" curtains={false} />
       <Shelf x={180} y={330} w={460} items={["plate", "plate", "cup", "jar", "plate"]} f={p.f} rattle={p.eruption ? 1 : 0} />
+      {/* map of the valley: river through the middle, trail up to the ridge */}
+      <g transform="translate(730 210)">
+        <rect x={0} y={0} width={300} height={220} fill="#f3e2b0" {...O} />
+        <path d="M 10 150 Q 90 110 150 140 T 290 120" stroke="#3b7dd8" strokeWidth={10} fill="none" />
+        <path d="M 40 40 L 90 30 L 120 60" stroke="#6b5a3a" strokeWidth={5} fill="none" />
+        <path d="M 160 130 Q 200 90 230 60 L 255 40" stroke="#c94f3a" strokeWidth={5} strokeDasharray="10 8" fill="none" />
+        <path d="M 230 55 L 255 25 L 280 55 Z" fill="#7d7882" {...thin} />
+        <rect x={242} y={30} width={22} height={16} fill="#a8774d" {...thin} />
+        <circle cx={70} cy={120} r={8} fill="#c94f3a" {...thin} />
+      </g>
       <Shelf x={180} y={480} w={460} items={["can", "can", "jar", "can"]} f={p.f} rattle={p.eruption ? 1 : 0} />
     </Room>
     {/* counter + sink */}
@@ -299,6 +309,7 @@ const RangerOutside: React.FC<PlaceProps> = (p) => (
     <g transform="translate(1180 860)">
       <rect x={-300} y={-300} width={600} height={300} fill={mix("#a8774d", "#8f8a83", p.ash * 0.5)} {...O} />
       {[...Array(6)].map((_, i) => <line key={i} x1={-300} y1={-250 + i * 50} x2={300} y2={-250 + i * 50} {...thin} />)}
+      <rect x={110} y={-440} width={44} height={110} fill="#8a6a5a" {...O} />
       <path d="M -340 -300 L 0 -470 L 340 -300 Z" fill={mix("#4f6b45", "#77726c", p.ash * 0.6)} {...O} />
       <rect x={-60} y={-200} width={120} height={200} fill="#5b3a26" {...thin} />
       <rect x={140} y={-230} width={110} height={90} fill="#9fc4dd" {...thin} />

@@ -34,11 +34,22 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
   const cx = x0 + (x1 - x0) * ramp(f, 0, frames);
   const floor = s.y ?? place.floorY;
 
-  // camera: shot size → zoom, focus on the character
+  // dog position (walks beside the character, or sits at a given spot, e.g. on a windowsill)
+  const dogPose0 = s.dog ?? "none";
+  const dogX = s.dog_x ?? (dogPose0 === "walk" || dogPose0 === "run" ? cx - dirSign * 190 * sc : place.dogX);
+  const dogFloor = s.dog_y ?? floor;
+
+  // camera: shot size → zoom, focus on the character (or on the dog / a point)
   const figH = FIGURE_HEIGHT * sc;
   const headY = floor + HEAD_Y * sc;
   let z = 1, fx = 960, fy = 540;
-  if (s.character === false) { z = s.shot === "wide" ? 1.06 : s.shot === "medium" ? 1.35 : 1.8; }
+  if (s.focus === "dog") {
+    z = s.shot === "closeup" ? 340 / (90 * sc) : s.shot === "medium" ? 200 / (90 * sc) : 1.06;
+    fx = dogX + 20 * sc; fy = dogFloor - 80 * sc;
+    if (s.shot === "wide") { fx = 960; fy = 540; }
+  } else if (Array.isArray(s.focus)) {
+    z = s.shot === "closeup" ? 2.6 : s.shot === "medium" ? 1.7 : 1.06; [fx, fy] = s.focus;
+  } else if (s.character === false) { z = s.shot === "wide" ? 1.06 : s.shot === "medium" ? 1.35 : 1.8; }
   else if (s.pose === "sleeping") { z = s.shot === "closeup" ? 2.2 : s.shot === "medium" ? 1.5 : 1.06; fx = cx; fy = floor - 140 * sc; }
   else if (s.shot === "medium") { z = Math.max(1.25, (1080 * 0.78) / figH); fx = cx; fy = floor - figH * 0.55; }
   else if (s.shot === "closeup") { z = 360 / (2 * 80 * sc); fx = cx + 10 * sc * dirSign; fy = headY + 20 * sc; }
@@ -49,7 +60,8 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
   if (s.camera === "pan_right") fx -= (1 - 2 * t) * (130 / z);
   // with an on-screen card (not centred), slide the camera so the character sits in the left third
   const hasSideOverlay = (Array.isArray(s.overlay) ? s.overlay : s.overlay ? [s.overlay] : []).some((o) => (o.side ?? "auto") !== "center" && o.type !== "question");
-  if (hasSideOverlay && s.character !== false && s.shot !== "wide") fx += 330 / z;
+  if (hasSideOverlay && s.character !== false && !s.focus && s.shot !== "wide") fx += 330 / z;
+  if (hasSideOverlay && s.focus && s.shot !== "wide") fx += 330 / z;
   // keep the view inside the drawn world
   const hw = 960 / z, hh = 540 / z;
   fx = Math.min(2080 - hw, Math.max(-160 + hw, fx));
@@ -60,10 +72,9 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
 
   const L = LOOKS[s.time_of_day];
   const lampsOff = !!ex.flashlight;
-  const dogPose = s.dog ?? "none";
+  const dogPose = dogPose0;
   const props = [...(s.props ?? [])];
   if (dogPose === "carried" && !props.includes("dog")) props.push("dog");
-  const dogX = dogPose === "walk" || dogPose === "run" ? cx - dirSign * 190 * sc : place.dogX;
 
   return (
     <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
@@ -72,13 +83,13 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
           <g style={{ filter: `saturate(${1 - 0.8 * ashCover}) brightness(${1 - 0.08 * ashCover})` }}>
             <place.C tod={s.time_of_day} ash={ashCover} f={f} eruption={ex.eruption} lampsOff={lampsOff} />
           </g>
-          {ex.smoke && <Smoke x={1500} y={floor - 40} f={f} dark />}
+          {ex.smoke && <Smoke x={Array.isArray(ex.smoke) ? ex.smoke[0] : 1500} y={Array.isArray(ex.smoke) ? ex.smoke[1] : floor - 40} f={f} dark={!Array.isArray(ex.smoke)} />}
           {ex.fire && <Fire x={1500} y={floor} f={f} s={sc * 1.2} />}
           {ex.lahar && <Lahar f={f} y={place.floorY + (s.place === "hillside" ? 160 : 40)} frames={frames} maxX={s.character === false || s.place === "hillside" ? 2400 : cx - 170 * sc} />}
           {ex.car && <CarAway f={f} frames={frames} y={floor + 60} />}
           {(ex.zombies ?? 0) > 0 && <Crowd n={ex.zombies!} f={f} y={floor} x0={cx + 300} x1={1980} facing="left" />}
           {dogPose !== "none" && dogPose !== "carried" && (
-            <g transform={`translate(${dogX} ${floor})`}>
+            <g transform={`translate(${dogX} ${dogFloor})`}>
               <Dog pose={dogPose === "window" ? "sit" : dogPose} f={f} facing={dogPose === "walk" || dogPose === "run" ? facing : "left"} scale={sc * 0.95} />
             </g>
           )}
@@ -103,7 +114,7 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
         </defs>
         <rect x={0} y={0} width={1920} height={1080} fill="url(#vig)" />
       </svg>
-      {s.day_title && <DayTitle text={s.day_title} f={f} frames={frames} />}
+      {s.day_title && <DayTitle text={s.day_title} f={f} frames={frames} short={!!s.overlay} />}
       {(Array.isArray(s.overlay) ? s.overlay : s.overlay ? [s.overlay] : []).map((o, i) => (
         <OverlayView key={i} o={o} f={f} frames={frames} startFrame={overlayStart(o, s.text, frames)}
           charSide={s.character === false ? "left" : 960 + (cx - fx) * z > 960 ? "right" : "left"} />
@@ -113,8 +124,9 @@ export const SceneView: React.FC<{ s: SceneData | TimedScene; frames: number }> 
 };
 
 // Big bold "DAY 1" title: white with a thick black outline, pops in, holds, fades.
-export const DayTitle: React.FC<{ text: string; f: number; frames: number }> = ({ text, f, frames }) => {
-  const hold = Math.min(frames - 6, 60);
+export const DayTitle: React.FC<{ text: string; f: number; frames: number; short?: boolean }> = ({ text, f, frames, short }) => {
+  // with an overlay after it (e.g. the countdown chips), the title leaves sooner so they never overlap
+  const hold = Math.min(frames - 6, short ? 30 : 60);
   const pop = eback(ramp(f, 0, 9));
   const out = 1 - ramp(f, hold, hold + 10);
   return (

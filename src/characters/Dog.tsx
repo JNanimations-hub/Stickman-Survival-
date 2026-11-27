@@ -97,6 +97,11 @@ export const Dog: React.FC<{ pose: DogPose; f: number; facing?: "left" | "right"
         )}
         {/* little red collar */}
         <path d="M -26 22 Q 0 36 22 28" fill="none" stroke="#d83b3b" strokeWidth={8} strokeLinecap="round" />
+        {/* the little metal tag: "If found, return to Quarry Ridge Ranger Station" */}
+        <g transform={`rotate(${Math.sin(f * 0.25) * 8} 0 32)`}>
+          <line x1={0} y1={32} x2={0} y2={38} stroke={INK} strokeWidth={2.5} />
+          <circle cx={0} cy={44} r={7} fill="#c9ccd2" stroke={INK} strokeWidth={3} />
+        </g>
       </g>
     </g>
   );

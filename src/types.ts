@@ -13,7 +13,7 @@ export type DogPose = "none" | "sit" | "stand" | "walk" | "run" | "lie" | "carri
 export interface Extras {
   zombies?: number;        // 0–40
   fire?: boolean;
-  smoke?: boolean;
+  smoke?: boolean | [number, number];   // true = big fire smoke; [x, y] = thin smoke from that point (e.g. a chimney)
   police_lights?: boolean;
   rain?: boolean;
   snow?: boolean;
@@ -45,7 +45,10 @@ export interface SceneData {
   dog?: DogPose;
   x?: number;              // character x in the place (0–1920); default = the place's spot
   x_to?: number;
-  y?: number;              // feet y override (e.g. lying on the bed); default = the place floor           // walk/run to this x during the scene
+  y?: number;
+  dog_x?: number;          // dog position override (e.g. on a windowsill)
+  dog_y?: number;
+  focus?: "dog" | [number, number];  // point the camera at the dog, or at a spot in the place              // feet y override (e.g. lying on the bed); default = the place floor           // walk/run to this x during the scene
   facing?: "left" | "right";
   ash_cover?: number;      // 0–1: how grey/buried the world looks
   // filled by the voice step

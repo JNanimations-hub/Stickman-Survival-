@@ -39,7 +39,9 @@ export const Smoke: React.FC<{ x: number; y: number; f: number; dark?: boolean }
   <g>
     {[...Array(10)].map((_, i) => {
       const t = ((f * 0.8 + i * 24) % 240) / 240;
-      return <circle key={i} cx={x + Math.sin(i * 1.7 + t * 3) * 40 + t * 120} cy={y - t * 520} r={30 + t * 110} fill={dark ? "#4a4744" : "#8f8b86"} opacity={(1 - t) * 0.7} />;
+      return dark
+        ? <circle key={i} cx={x + Math.sin(i * 1.7 + t * 3) * 40 + t * 120} cy={y - t * 520} r={30 + t * 110} fill="#4a4744" opacity={(1 - t) * 0.7} />
+        : <circle key={i} cx={x + Math.sin(i * 1.7 + t * 3) * 10 + t * 60} cy={y - t * 300} r={8 + t * 34} fill="#d9d4cc" opacity={(1 - t) * 0.8} />;
     })}
   </g>
 );

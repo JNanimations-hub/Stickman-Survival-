@@ -37,7 +37,7 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
     "place": "riverbed", "time_of_day": "day",          // morning | day | dusk | night
     "pose": "running", "face": "scared",
     "props": ["flashlight"], "shot": "wide",            // wide | medium | closeup
-    "extras": {"ash": 0.5, "lahar": true},              // zombies 0–40, fire, smoke, police_lights, rain, snow,
+    "extras": {"ash": 0.5, "lahar": true},              // zombies 0–40, fire, smoke (true, or [x,y] for thin chimney smoke), police_lights, rain, snow,
                                                         // ash 0–1, lightning, eruption, lahar, car, flashlight
     "camera": "shake",                                  // push_in | pan_left | pan_right | shake | still
     "day_title": "DAY 60",                              // or null; use a WIDE shot when set
@@ -46,6 +46,8 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
     "ash_cover": 0.8,                                   // 0–1, how grey the world is
     "x": 900, "x_to": 1300, "y": 760, "facing": "right", // optional staging (y = feet height, e.g. on a bed)
     "character": false,                                 // optional: shot without the main character
+    "focus": "dog",                                     // optional: camera on the dog, or [x, y] = on a spot (e.g. a map)
+    "dog_x": 930, "dog_y": 576,                         // optional dog position (930/576 = living-room windowsill)
     "overlay": {"type": "stat", "text": "31 GALLONS", "icon": "drop", "on": "Thirty"},  // optional, or a list
     "duration": 2.41, "audio": "voice/scene_001.wav"    // written by the voice step
   } ] }
@@ -59,6 +61,8 @@ network proxy adds the key; on your own computer set `ELEVENLABS_API_KEY`.
   `on` = the word that triggers it (must be in the text); or `at` = seconds into the scene.
   The camera automatically moves the character to the left third so the card never covers the face,
   and a soft "pop" sound plays when it appears. Keep card text short (≤ 5 words) and in CAPITALS.
+- Handy spots: ranger-station chimney top = [1312, 420]; kitchen map = focus [880, 320].
+- A day title followed by an overlay (e.g. the countdown chips with `"at": 1.4`) leaves early so they never overlap.
 - Places: valley, farmhouse, road, living_room, kitchen, back_yard, hallway, workshop, bedroom,
   bedroom_collapsed, porch, garden, pantry, front_door, town_street, riverbed, hillside,
   ranger_station, ranger_inside, ridge_top. New places go in `src/places/index.tsx`.
