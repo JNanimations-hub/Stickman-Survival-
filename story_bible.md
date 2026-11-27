@@ -22,7 +22,7 @@ Thumbnail idea: a stick figure in a **yellow raincoat** with a small brown dog i
 | **Personality** | Careful, gentle, stubborn |
 | **Weakness** | **He needs his glasses.** Without them, the world is a blur. Ash scratches the lenses a little more every week. |
 
-**COMPANION:** **Pebble**, a small, scruffy brown dog with one floppy ear. Nico's neighbours left him behind when they drove away. Pebble shows up on Day 1, matters on Day 3 (Nico breaks a rule to save him), and saves Nico's life on Day 50.
+**COMPANION:** **Pebble**, a small, scruffy brown dog with one floppy ear. Nico's neighbours left him behind when they drove away. **Secret (revealed Day 6):** his collar tag says "If found, return to Quarry Ridge Ranger Station". He was never the neighbours' dog; they were dog-sitting for the ranger. Every night at ten he stares up at the ridge and whines, waiting for his owner. Pebble shows up on Day 1, matters on Day 3 (Nico breaks a rule to save him), and saves Nico's life on Day 50.
 
 ---
 
@@ -56,6 +56,15 @@ Thumbnail idea: a stick figure in a **yellow raincoat** with a small brown dog i
 - Reads the **countdown** out loud at each jump: "Nineteen gallons. Twelve days of food. Four masks."
 
 ---
+
+## STORY UPDATES (after episode 1, from research on Nov 27)
+Other new channels posted volcano-ash survival stories the same week, one using the rain + roof-collapse twist. So:
+- **Pebble is the hook** in titles and thumbnails (no competitor has a dog).
+- **Mystery thread:** Pebble's 10 PM stare at Quarry Ridge → Day 6 collar tag → Day 9 chimney smoke on the ridge
+  (someone is alive) → Day 12 the smoke stops. The ranger station becomes the goal, not just a place found by chance.
+- The Day 50 roof collapse stays, but it's no longer the big shock: the big shock is now the tag (Day 6), and later
+  what Nico finds at the ranger station.
+- Each episode must **stand alone**: a short recap inside the cold open, and no "Part 2" in titles.
 
 ## TICKING CLOCKS (read out at every time jump)
 1. **Water:** gallons left in the bottles.
