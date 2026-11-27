@@ -1,5 +1,5 @@
 # My Dog Knew Something Was on the Ridge: 12 Days Under a Volcano
-*Episode 2. About 10 minutes, about 1,450 words. Standalone: a new viewer needs nothing from episode 1.
+*Episode 2. About 9–10 minutes, 1,438 words of narration. Standalone: a new viewer needs nothing from episode 1.
 Narrator: calm, serious, talks to "you". Facts: only from the story bible's FACTS LIST.*
 
 **Title options** (Pebble is the hook; no "Part 2"):
@@ -98,6 +98,38 @@ Pebble is back on the windowsill, staring at the ridge.
 
 ---
 
+## DAY 5
+
+**[DAY 5]**
+
+Twenty-eight gallons. Eight centimetres. Thirteen batteries.
+
+The fridge is empty now. Time for the pantry.
+Rows of cans, every one wearing a grey coat of dust.
+
+You want to just pop one open.
+Don't.
+Ash on the lid falls straight into your food.
+Wipe every can clean before you open it.
+
+Out in the garden, the tomatoes are still on the vine, grey as stones.
+You pick six of them.
+Food from the garden is fine to eat, but wash it well first. Really well.
+The water in the bowl turns grey. Then you wash them again.
+
+That evening you sit on the kitchen floor with a can of beans and a clean tomato.
+Pebble sits next to you and watches every bite.
+You give him half the beans.
+He gives you his paw.
+
+It's the closest thing to a normal dinner you've had in five days.
+
+Ten o'clock.
+Pebble goes to the window.
+This time he scratches the glass, like he's trying to dig his way up the mountain.
+
+---
+
 ## DAY 6
 
 **[DAY 6]**
@@ -129,6 +161,32 @@ He belongs to someone up on the ridge.
 
 Every night at ten, he hasn't been scared.
 He's been waiting for them.
+
+---
+
+## DAY 8
+
+**[DAY 8]**
+
+Twenty-five gallons. Ten centimetres. Eleven batteries.
+
+You go out to the shed for more towels.
+Thirty steps there. Thirty steps back.
+Halfway, the wind changes, and a cloud of ash blows straight into your face.
+
+Your eyes sting.
+Your hand comes up to rub them.
+Don't.
+If ash gets in your eyes, rubbing it in is like rubbing sand on glass.
+Rinse your eyes with clean water instead, and keep rinsing until the stinging stops.
+
+Back inside, you hold your glasses up to the window.
+Two scratches now.
+Without them, the whole world is a blur. You can't read a can. You can't see the ridge.
+So you keep them on, always. Glasses, not contact lenses. A speck of ash under a contact lens can scratch your eye badly.
+
+Pebble pushes his nose into your hand, like he's checking you're all right.
+You are. Just about.
 
 ---
 
